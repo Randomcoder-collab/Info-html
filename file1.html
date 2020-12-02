@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About HTML</title>
+    <meta charset="utf-8" />
+    <meta name="info-html.com" content="info-html.com" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $(".navbar a, footer a[href='#myPage']").on("click", function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              900,
+              function() {
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+
+      function CloseWindow() {
+        if (confirm("Are you sure that  you wanna close the tab?")) {
+          close();
+        }
+      }
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {
+        height: 450px;
+      }
+
+      .sidenav {
+        padding-top: 20px;
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+        height: 100px;
+        width: 1328px;
+      }
+
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {
+          height: auto;
+        }
+      }
+      li {
+        cursor: pointer;
+      }
+
+      #me:link {
+        color: white;
+      }
+
+      #me:visited {
+        color: white;
+      }
+
+      #ne:link {
+        color: white;
+      }
+
+      #ne:visited {
+        color: white;
+      }
+
+      #le:link {
+        color: white;
+      }
+
+      #le:visited {
+        color: white;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .container {
+        border-radius: 5px;
+        padding: 20px;
+        width: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#footer">About</a></li>
+            <li><a href="#footer">Footer</a></li>
+            <li><a href="#c">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href=""
+                ><span
+                  class="glyphicon glyphicon-log-in"
+                  onclick="CloseWindow();return false;"
+                  id="exit"
+                ></span>
+                Exit</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p><a target="_blank" href="#b">Home</a></p>
+          <p><a target="_blank" href="#a">Founder of HTML</a></p>
+          <p><a target="_blank" href="#c">Contact us</a></p>
+          <p>
+            <a target="_blank" href="https://about-html-about.glitch.me/"
+              >About</a
+            >
+          </p>
+          <p><a href="#footer">Footer</a></p>
+          <p>
+            <a target="_blank" href="https://info-html-about.glitch.me/#W"
+              >What us this site</a
+            >
+          </p>
+          <p>
+            <a target="_blank" href="https://info-html-about.glitch.me/#c"
+              >Credits</a
+            >
+          </p>
+        </div>
+        <div class="col-sm-8 text-left">
+          <h1 id="b">HTML: HyperText Markup Language.</h1>
+          <p>
+            Markup Language (HTML) is the standard markup language for documents
+            designed to be displayed in a web browser. It can be assisted by
+            technologies such as Cascading Style Sheets (CSS) and scripting
+            languages such as JavaScript. Web browsers receive HTML documents
+            from a web server or from local storage and render the documents
+            into multimedia web pages. HTML describes the structure of a web
+            page semantically and originally included cues for the appearance of
+            the document. HTML elements are the building blocks of HTML pages.
+            With HTML constructs, images and other objects such as interactive
+            forms may be embedded into the rendered page. HTML provides a means
+            to create structured documents by denoting structural semantics for
+            text such as headings, paragraphs, lists, links, quotes and other
+            items. HTML elements are delineated by tags, written using angle
+            brackets. Tags such as directly introduce content into the page.
+            Other tags such as surround and provide information about document
+            text and may include other tags as sub-elements. Browsers do not
+            display the HTML tags, but use them to interpret the content of the
+            page. HTML can embed programs written in a scripting language such
+            as JavaScript, which affects the behavior and content of web pages.
+            Inclusion of CSS defines the look and layout of content. The World
+            Wide Web Consortium (W3C), former maintainer of the HTML and current
+            maintainer of the CSS standards, has encouraged the use of CSS over
+            explicit presentational HTML since 1997.
+            <a target="_blank" href="https://en.wikipedia.org/wiki/HTML"
+              >Learn more</a
+            >
+          </p>
+          <p>
+            <strong>Devloped by:</strong>
+            WHATWG.
+          </p>
+          <br />
+          <p>
+            <strong>Type of format:</strong>
+            Document file format.
+          </p>
+          <br />
+          <p>
+            <strong>Latest release:</strong>
+            HTML 5.2.
+          </p>
+          <br />
+          <p>
+            <strong>Container for: </strong>
+            HTML elements.
+          </p>
+          <br />
+          <p>
+            <strong>Contained by: </strong>
+            Web browser
+          </p>
+          <p>
+            <br />
+            <strong>Extended from: </strong>
+            SGML
+          </p>
+          <br />
+          <img
+            src="data:image/png;base64,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"
+          />
+          <hr />
+          <h1 id="The web">
+            The World Wide Web.
+          </h1>
+          <p>
+            The World Wide Web (WWW), commonly known as the Web, is an
+            information system where documents and other web resources are
+            identified by Uniform Resource Locators (URLs, such as
+            https://example.com/), which may be interlinked by hypertext, and
+            are accessible over the Internet.The resources of the Web are
+            transferred via the Hypertext Transfer Protocol (HTTP), may be
+            accessed by users by a software application called a web browser,
+            and are published by a software application called a web server. The
+            World Wide Web is not synonymous with the Internet, which
+            pre-existed the Web in some form by over two decades and upon whose
+            technologies the Web is built. English scientist Tim Berners-Lee
+            invented the World Wide Web in 1989. He wrote the first web browser
+            in 1990 while employed at CERN near Geneva, Switzerland. The browser
+            was released outside CERN to other research institutions starting in
+            January 1991, and then to the general public in August 1991. The
+            World Wide Web has been central to the development of the
+            Information Age, and is the primary tool billions of people use to
+            interact on the Internet. Web resources may be any type of
+            downloaded media, but web pages are hypertext documents formatted in
+            Hypertext Markup Language (HTML). Special HTML syntax displays
+            embedded hyperlinks with URLs which permits users to navigate to
+            other web resources. In addition to text, web pages may contain
+            references to images, video, audio, and software components which
+            are either displayed or internally executed in the user's web
+            browser to render pages or streams of multimedia content. Multiple
+            web resources with a common theme and usually a common domain name,
+            make up a website. Websites are stored in computers that are running
+            a web server, which is a program that responds to requests made over
+            the Internet from web browsers running on a user's computer. Website
+            content can be provided by a publisher, or interactively from
+            user-generated content. Websites are provided for a myriad of
+            informative, entertainment, commercial, and governmental reasons.
+          </p>
+          <a target="_blank" href="https://en.wikipedia.org/wiki/World_Wide_Web"
+            >Learn more</a
+          >
+          <br />
+          <img
+            src="data:image/png;base64,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"
+          />
+          <hr />
+          <h1 id="a">Founder of HTML: Tim Berners-Lee.</h1>
+          <p>
+            Sir Tim Berners-Lee invented the World Wide Web in 1989. He is the
+            co-founder and CTO of Inrupt.com, a tech start-up which uses,
+            promotes and helps develop the open source Solid platform. Solid
+            aims to give people control and agency over their data, questioning
+            many assumptions about how the web has to work. Solid technically is
+            is new level of standard at the web layer, which adds things never
+            put into the original spec, such as global single sign-on, universal
+            access control, and a universal data API so that any app can store
+            data in any storage place. Socially Solid is a movement away from
+            much of the issues with the current WWW, and toward a world in which
+            users are in control, and empowered by large amounts of data,
+            private, shared, and public. Sir Tim is the Director of the World
+            Wide Web Consortium (W3C), a Web standards organization founded in
+            1994 which develops interoperable technologies (specifications,
+            guidelines, software, and tools) to lead the Web to its full
+            potential. He is a Director of the World Wide Web Foundation which
+            was launched in 2009 to coordinate efforts to further the potential
+            of the Web to benefit humanity. A graduate of Oxford University, Sir
+            Tim invented the Web while at CERN, the European Particle Physics
+            Laboratory, in 1989. He wrote the first web client and server in
+            1990. His specifications of URIs, HTTP and HTML were refined as Web
+            technology spread. He is the 3Com Founders Professor of Engineering
+            in the School of Engineering with a joint appointment in the
+            Department of Electrical Engineering and Computer Science at the
+            Laboratory for Computer Science and Artificial Intelligence ( CSAIL)
+            at the Massachusetts Institute of Technology (MIT) where he co-leads
+            the Decentralized Information Group (DIG). The Decentralized
+            Information Group, works on the Solid Project to give people control
+            of their own data and to re-decentralize the Web. He is the
+            co-founder and CTO of inrupt, the company launched to ensure the
+            success of the Solid platform and its open source community, and to
+            build the ecosystem that supports it. He is also a Professor in the
+            Computer Science Department at the University of Oxford, UK. He is
+            President of and founded the Open Data Institute in London. He is
+            President of London's Open Data Institute. In 2001 he became a
+            Fellow of the Royal Society. He has been the recipient of several
+            international awards including the Japan Prize, the Prince of
+            Asturias Foundation Prize, the Millennium Technology Prize and
+            Germany's Die Quadriga award. In 2004 he was knighted by H.M. Queen
+            Elizabeth and in 2007 he was awarded the Order of Merit. In 2009 he
+            was elected a foreign associate of the National Academy of Sciences.
+            He is the author of "Weaving the Web". On March 18 2013, Sir Tim,
+            along with Vinton Cerf, Robert Kahn, Louis Pouzin and Marc
+            Andreesen, was awarded the Queen Elizabeth Prize for Engineering for
+            "ground-breaking innovation in engineering that has been of global
+            benefit to humanity." Sir Tim has promoted open government data
+            globally and spends time fighting for rights such as net neutrality,
+            privacy and the openness of the Web. On 4 April 2017, Sir Tim was
+            awarded the ACM A.M. Turing Prize for inventing the World Wide Web,
+            the first web browser, and the fundamental protocols and algorithms
+            allowing the Web to scale. The Turing Prize, called the "Nobel Prize
+            of Computing" is considered one of the most prestigious awards in
+            Computer Science.
+          </p>
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Tim_Berners-Lee"
+            >Learn more</a
+          >
+
+          <br />
+
+          <img
+            src="data:image/jpeg;base64,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"
+          />
+          <br />
+
+          <hr />
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p>ADS</p>
+          </div>
+          <div class="well">
+            <p>ADS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <form>
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+
+        <label for="subject">Message</label>
+
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height:200px"
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <footer class="container-fluid text-center" id="footer">
+      <li>
+        <a target="_blank" href="https://info-html-about.glitch.me/" id="me"
+          >About</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://info-html-about.glitch.me/#W" id="ne"
+          >What is this site</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://info-html-about.glitch.me/#c" id="le"
+          >Credits</a
+        >
+      </li>
+    </footer>
+  </body>
+</html>
